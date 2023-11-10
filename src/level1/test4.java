@@ -7,12 +7,16 @@ public class test4 { // x만큼 간격이 있는 n개의 숫자
     public static void main(String[] args){
         int x = 2;
         int n = 5;
-        int a = 0;
-        long[] an = new long[n]; // n개의 리스트 생성
-        for(int i = 0; i < n; i++){ //n 개 만큼 증가
-            a += x; // a 에 n개 만큼 x를 더함
-            an[i] = a; // a를 리스트에 더함
-            System.out.println(an[i]);
+        long a = 0;
+        long[] answer = new long[n];
+        if(n <= 1000){
+            if(x <= 10000000 && x >= -10000000){
+                for(int i = 0; i < n; i++){
+                    a += x;
+                    answer[i] = a;
+                    System.out.println(answer[i]);
+                }
+            }
         }
         }
 
